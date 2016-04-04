@@ -3,11 +3,11 @@ import java.awt.event.*;
 import java.util.ArrayList;
 import javax.swing.*;
 
-public class fishPanel extends JPanel implements FocusListener, ActionListener {
+public class FishPanel extends JPanel implements FocusListener, ActionListener {
 
 	public static void main(String[] args) {
 		JFrame window = new JFrame("Fish Game");
-		window.setContentPane(new fishPanel());
+		window.setContentPane(new FishPanel());
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.setLocation(75,75);
 		window.setSize(widthOfPanel,heightOfPanel);
@@ -41,9 +41,9 @@ public class fishPanel extends JPanel implements FocusListener, ActionListener {
 	JLabel difficultyLabel = new JLabel("Easy-->");
 	JSlider difficultyLevel = new JSlider(0, 3, 0);
 	
-//-------------------------------------Start of fishPanel-------------------------------------------------	
+//-------------------------------------Start of FishPanel-------------------------------------------------	
 
-	public fishPanel() {
+	public FishPanel() {
 		this.setLayout(new BorderLayout());
 		this.setBackground(Color.CYAN);
 		this.setBorder(BorderFactory.createLineBorder(Color.BLACK, 3)); // a border of 3 pixels
@@ -105,7 +105,7 @@ public class fishPanel extends JPanel implements FocusListener, ActionListener {
             }
         });
 	} 
-//------------------------------------End of fishPanel------------------------------------------
+//------------------------------------End of FishPanel------------------------------------------
 //-----------------------------Start of Drawing and Listeners-----------------------------------
 	
 	@Override
